@@ -13,7 +13,7 @@ function login() {
             passwordValue === '664089') {
             resultOutput.style.color = '#0f0'
             window.location.href = 'https://jackyhoi.github.io/1/停服.html';
-        }
+        } else
         if (accountValue === 'hoikahei' &&
             passwordValue === '070608') {
             resultOutput.style.color = '#0f0'
