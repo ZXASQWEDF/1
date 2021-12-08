@@ -9,13 +9,18 @@ function login() {
     setTimeout(function() {
         const accountValue = accountInput.value
         passwordValue = passwordInput.value
-        if (accountValue === 's123456' &&
-            passwordValue === '123456') {
+        if (accountValue === 'GORDAN' &&
+            passwordValue === '664089') {
             resultOutput.style.color = '#0f0'
             window.location.href = 'https://jackyhoi.github.io/hfie.com/asss/<html>.html';
+        }
+        if (accountValue === 'hoikahei' &&
+            passwordValue === '070608') {
+            resultOutput.style.color = '#0f0'
+            window.location.href = 'https://jackyhoi.github.io/1/hoikahei.html';
         } else {
             resultOutput.style.color = '#f00'
-            resultOutput.innerText = '請用戶帳號是否正確'
+            resultOutput.innerText = '帳號或密碼不正確'
         }
     }, 2000)
 }
