@@ -12,7 +12,7 @@ function login() {
         if (accountValue === 'GORDAN' &&
             passwordValue === '664089') {
             resultOutput.style.color = '#0f0'
-            window.location.href = 'https://jackyhoi.github.io/hfie.com/asss/<html>.html';
+            window.location.href = 'https://jackyhoi.github.io/1/<html>.html';
         }
         if (accountValue === 'hoikahei' &&
             passwordValue === '070608') {
@@ -29,7 +29,7 @@ x = 3.14; // 报错 (x 未定义)
 let xxx = window.confirm("以停服，請注意公告")
 if (xxx) {
     window.alert("你好！");
-} else { window.location.href = "https://jackyhoi.github.io/hfie.com/asss/Untitled-1.html"; }
+} else { window.location.href = "https://jackyhoi.github.io/1/登入.html"; }
 loginButton.addEventListener('click', login) // JavaScript Document
 var flag = false;
 var div = document.getElementById("con");
