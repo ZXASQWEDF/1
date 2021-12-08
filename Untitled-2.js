@@ -12,7 +12,7 @@ function login() {
         if (accountValue === 'GORDAN' &&
             passwordValue === '664089') {
             resultOutput.style.color = '#0f0'
-            window.location.href = 'https://jackyhoi.github.io/1/<html>.html';
+            window.location.href = 'https://jackyhoi.github.io/1/停服.html';
         }
         if (accountValue === 'hoikahei' &&
             passwordValue === '070608') {
@@ -26,7 +26,7 @@ function login() {
 }
 "use strict";
 x = 3.14; // 报错 (x 未定义)
-let xxx = window.confirm("以停服，請注意公告")
+let xxx = window.confirm("以停服，系統有大升級")
 if (xxx) {
     window.alert("你好！");
 } else { window.location.href = "https://jackyhoi.github.io/1/登入.html"; }
