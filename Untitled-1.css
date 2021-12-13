@@ -1,57 +1,36 @@
-.p button {
-    position: relative;
-    background-color: #4CAF50;
-    border: none;
-    font-size: 28px;
-    color: #FFFFFF;
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.wrap {
+    width: 400px;
+    height: 100px;
+    margin: 50px auto;
+}
+
+.times {
+    line-height: 100px;
     text-align: center;
-    -webkit-transition-duration: 0.4s;
-    /* Safari */
-    transition-duration: 0.4s;
-    text-decoration: none;
-    overflow: hidden;
-    cursor: pointer;
+    background-color: #E0FFFF;
+    box-shadow: 0 0 3px blue;
 }
 
-div {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-input {
-    width: 100%;
-}
-
-input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: 2px solid red;
-    border-radius: 4px;
-}
-
-input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
+.times .day,
+.times .hours,
+.times .minutes,
+.times .seconds {
+    width: 40px;
+    height: 40px;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    background-color: Violet;
+    line-height: 40px;
+    box-shadow: 0 0 3px #ccc;
 }
 
-input {
-    width: 100%;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input {
-    background-color: cadetblue
+.times .hours,
+.times .minutes,
+.times .seconds {
+    margin-left: 10px;
 }
