@@ -18,7 +18,7 @@
          var minsold = Math.floor((e_hrsold - hrsold) * 60);
          var seconds = Math.floor((e_minsold - minsold) * 60);
          if (daysold < 0) {
-             window.location.href = "https://jackyhoi.github.io/1/ppp.html";
+             window.location.href = "https://zxasqwedf.github.io/1/ppp.html";
              clearInterval(timer);
          } else {
              if (daysold < 10) {
@@ -47,7 +47,7 @@
      //获取到id为time标签中的内容，现进行判断
      if (time.innerHTML == 0) {
          //等于0时清除计时
-         window.location.href = "https://jackyhoi.github.io/1/登入.html";
+         window.location.href = "https://zxasqwedf.github.io/1/登入.html";
      } else {
          time.innerHTML = time.innerHTML - 1;
      }

@@ -12,24 +12,25 @@ function login() {
         if (accountValue === 'GORDAN' &&
             passwordValue === '664089') {
             resultOutput.style.color = '#0f0'
-            window.location.href = 'https://zxasqwedf.github.io/1/停服.html';
+            window.location.href = 'https://jackyhoi.github.io/fsfdf.github.io/shjdfkhsd/fdsd.html';
         } else
         if (accountValue === 'hoikahei' &&
             passwordValue === '070608') {
             resultOutput.style.color = '#0f0'
-            window.location.href = 'https://zxasqwedf.github.io/1/hoikahei.html';
+            window.location.href = 'https://sites.google.com/view/hoikahei/%E4%BB%A3%E6%89%93%E7%B3%BB%E7%B5%B1';
         } else {
             resultOutput.style.color = '#f00'
             resultOutput.innerText = '帳號或密碼不正確'
         }
     }, 2000)
 }
-"use strict";
-x = 3.14; // 报错 (x 未定义)
-let xxx = window.confirm("以停服，系統有大升級")
-if (xxx) {
-    window.alert("你好！");
-} else { window.location.href = "https://zxasqwedf.github.io/1/登入.html"; }
+
+//防止页面后退
+history.pushState(null, null, document.URL);
+window.addEventListener('popstate', function() {
+    history.pushState(null, null, document.URL);
+});
+
+
+
 loginButton.addEventListener('click', login) // JavaScript Document
-var flag = false;
-var div = document.getElementById("con");
