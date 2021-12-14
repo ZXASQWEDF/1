@@ -24,3 +24,4 @@ function login() {
         }
     }, 2000)
 }
+loginButton.addEventListener('click', login) // JavaScript Document
