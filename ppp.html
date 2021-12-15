@@ -172,21 +172,7 @@
             <h3>
                 手機版1.1.0
             </h3>
-            <script>
-                $.ajaxSetup({
-                    cache: true
-                });
 
-                $.getScript('//connect.facebook.net/zh_CN/sdk.js', () => {
-                    FB.init({
-                        appId: '{{fb:appid}}',
-                        version: 'v2.8',
-                        xfbml: true
-                    });
-
-                    $('#loginbutton, #feedbutton').removeAttr('disabled');
-                });
-            </script>
         </body>
 
 </html>

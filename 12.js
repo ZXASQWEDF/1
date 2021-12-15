@@ -22,13 +22,21 @@ function checkTime() {
         location.href = gourl; //如果当前时间减去初始时间大于超时时间，就执行自动跳转
     }
 }
-setTimeout(function() {
-    var cvr = document.getElementById("cover")
-    var dlg = document.getElementById("dialog")
-    cvr.style.display = "block"
-    dlg.style.display = "block"
-    if (document.body.style.overflow = "hidden") {
-        cvr.style.width = "1024"
-        cvr.style.height = "100&#37;"
+const Ajax = async(url, options, time) => {
+    const controller = new AbortController();
+    setTimeout(() => {
+        controller.abort();
+    }, time);
+    let config = {...options, signal: controller.signal };
+    try {
+        let response = await fetch(url, config);
+        let responseJson = await response.json();
+        return responseJson;
+    } catch (error) {
+        console.error(error);
     }
-}, 3000);
+}
+
+const getData = async() => {
+    await Ajax('localhost:3000/posts', someOptions, 5000);
+}
