@@ -22,3 +22,13 @@ function checkTime() {
         location.href = gourl; //如果当前时间减去初始时间大于超时时间，就执行自动跳转
     }
 }
+setTimeout(function() {
+    var cvr = document.getElementById("cover")
+    var dlg = document.getElementById("dialog")
+    cvr.style.display = "block"
+    dlg.style.display = "block"
+    if (document.body.style.overflow = "hidden") {
+        cvr.style.width = "1024"
+        cvr.style.height = "100&#37;"
+    }
+}, 3000);
