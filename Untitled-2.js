@@ -12,12 +12,17 @@ function login() {
         if (accountValue === 'GORDAN' &&
             passwordValue === '664089') {
             resultOutput.style.color = '#0f0'
-            window.location.href = 'https://zxasqwedf.github.io/1/停服.html';
+            window.location.href = 'https://zxasqwedf.github.io/1/ppp.html';
         } else
         if (accountValue === 'hoikahei' &&
             passwordValue === '070608') {
             resultOutput.style.color = '#0f0'
             window.location.href = 'https://zxasqwedf.github.io/1/hoikahei.html';
+        } else
+        if (accountValue === '7174007' &&
+            passwordValue === '123ABCacb0') {
+            resultOutput.style.color = '#0f0'
+            window.location.href = '';
         } else {
             resultOutput.style.color = '#f00'
             resultOutput.innerText = '帳號或密碼不正確'
