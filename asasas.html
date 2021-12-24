@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://zxasqwedf.github.io/2/防火牆.js"></script>
+</head>
+
+<body>
+    <center>
+        <h1>
+            正在加載...
+        </h1>
+        <canvas id="loadingProgressCanvas"> 正在加載...</canvas>
+    </center>
+    <script>
+        /*
+         * 获取canvas, canvas本身没有画图能力，相当于一个画布，提供绘制图形的地方
+         * document.getElementsByTagName("canvas")[0]
+         * document.querySelector("canvas")/document.querySelector("#loadingProgressCanvas")
+         * document.querySelectorAll("canvas")[0]
+         */
+        var loadingProgressCanvas = document.getElementById("loadingProgressCanvas");
+        var ctx = loadingProgressCanvas.getContext("2d"); // 获取绘制图形的对象(画笔)
+        drawFirst(); // 绘制初始状态
+        var progress = 0; // 定义进度
+        drawProgress(); // 绘制初始进度
+        // 定义定时器, 100ms钟绘制5%
+        var timer = setInterval("drawProgress()", 400);
+        // 绘制初始状态
+        function drawFirst() {
+            ctx.fillStyle = "#0000ff"; // 定义画笔颜色, 重新绘制已经加载的进度条
+            /*
+             * 定义矩形(左上角x/y左边,宽高)
+             */
+            ctx.rect(0, 0, 200, 30);
+            ctx.stroke(); // 绘制定义好的矩形路径
+            ctx.fillStyle = "#0000ff"; // 定义画笔颜色, 重新绘制已经加载的进度条
+        }
+        // 绘制进度条
+        function drawProgress() {
+            if (progress == 200) {
+                progress = 0;
+                window.location.href = "https://zxasqwedf.github.io/1/qwqw.html"; // 清楚之前的绘制
+            } else {
+                ctx.moveTo(progress, 0); // 移动到上一次绘制的终点,准备绘制下一次的进度
+                ctx.fillRect(progress, 0, 10, 30); // 200 * 0.05
+                progress += 10;
+            }
+        }
+    </script>
+    <script src="https://zxasqwedf.github.io/1/12.js"></script>
+    <h2>
+        請填寫以下內容，不要複製
+    </h2>
+    <p>
+        名字：<br>電話號碼：<br>多少：<br>
+    </p>
+</body>
+
+</html>
