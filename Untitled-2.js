@@ -22,7 +22,7 @@ function login() {
         if (accountValue === '7174007' &&
             passwordValue === '123ABCacb0') {
             resultOutput.style.color = '#0f0'
-            window.location.href = 'https://zxasqwedf.github.io/1/停服.html';
+            window.location.href = 'https://zxasqwedf.github.io/1/ZXB,aq.html';
         } else {
             resultOutput.style.color = '#f00'
             resultOutput.innerText = '帳號或密碼不正確'
