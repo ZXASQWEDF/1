@@ -4,7 +4,7 @@
      var show = document.getElementById("show");
 
      function show_date_time() {
-         var target = new Date("2022/1/31 24:00:00");
+         var target = new Date("2022/5/1 00:00:00");
          var today = new Date();
          var timeold = (target.getTime() - today.getTime());
          var sectimeold = timeold / 1000
