@@ -43,8 +43,48 @@
         img {
             pointer-events: none;
         }
+        
+        .img {}
+        
+        .imgPreview {
+            display: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            /*容器佔滿整個螢幕*/
+            height: 100%;
+            position: fixed;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        
+        .imgPreview img {
+            z-index: 100;
+            width: 60%;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     </style>
 </head>
+<script type="text/javascript">
+    $(function() {
+
+
+        $('.img').on('click', function() {
+
+
+            var src = $(this).attr('src');
+            $('.imgPreview img').attr('src', src);
+            $('.imgPreview').show()
+        });
+        $('.imgPreview').on('click', function() {
+
+
+            $('.imgPreview').hide()
+        });
+    })
+</script>
 
 <body onselectstart="return false">
     <divclass="main_container">
@@ -52,7 +92,20 @@
         <div class="container">
             <center> <img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt=""> <input class="j" type="button" value="聯絡方式" onclick="self.location.href='mailto:hkh20070608@gmail.com?';" style=width:100px;height:40px;><img src="#" id="image"
                     width="100%" height="150"></center>
-
+            <table>
+                <tr>
+                    <h4>某波居然请喝饮料!!!!!!!!!!</h4>
+                    <td><img src="https://zxasqwedf.github.io/1/IMG_5863.jpg" width="150" height="200" class="a"></td>
+                </tr>
+            </table>2022/5/28 2:18:56
+            <table>
+                <tr>
+                    <h4>500元??</h4>
+                    <td><img src="https://zxasqwedf.github.io/1/IMG_5218.JPG" width="150" height="200" class="a"></td>
+                    <td><img src="https://zxasqwedf.github.io/1/IMG_5216 Small.jpeg" width="150" height="200" class="a"></td>
+                    <td><img src="https://zxasqwedf.github.io/1/IMG_5217.JPG" width="150" height="200" class="a"></td>
+                </tr>
+            </table>2022/1/23 12:05:15
             <div class="push">
             </div>
         </div>
