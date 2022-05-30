@@ -1,8 +1,15 @@
 <html>
 
 <head>
+    <link rel="shortcut icon" href="https://zxasqwedf.github.io/1/8EC2C0FD-FF56-4BA4-A051-504B75244CD5.JPG">
+    <title>jacky</title>
 
     <style>
+        body {
+            background-color: black;
+            color: white
+        }
+        
         .round_icon {
             width: 200px;
             height: 200px;
@@ -39,29 +46,24 @@
     </style>
 </head>
 
-<body onload="a()">
+<body onselectstart="return false">
     <divclass="main_container">
 
         <div class="container">
-            <center> <img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt=""><img src="/Users/老豆/w3logo.gif" id="image" width="500" height="150"></center>
+            <center> <img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt=""> <input class="j" type="button" value="聯絡方式" onclick="self.location.href='mailto:hkh20070608@gmail.com?';" style=width:100px;height:40px;><img src="#" id="image"
+                    width="100%" height="150"></center>
 
-        </div>
-
-        <div class="push">
-
-            <!--中间不要放任何东西-->
-
-        </div>
-
+            <div class="push">
+            </div>
         </div>
         <center>
-            <footerclass="footer">以上內容禁止轉發、下載、复制，如有發現可能会有刑事責任</footer>
+            <footerclass="footer">以上內容禁止轉發、下載、复制、截圖或截屏，如有發現可能会有刑事責任</footer>
         </center>
         <script>
             var arr = new Array()
-            arr[0] = "/Users/老豆/w3logo.gif";
-            arr[1] = "/Users/ckyja/Downloads/IMG_5703.JPG";
-            arr[2] = "3.jpg";
+            arr[0] = "#";
+            arr[1] = "#";
+            arr[2] = "#";
             var i = 0;
 
             function image() {
@@ -77,6 +79,10 @@
 
                 image();
             }, 1000);
+        </script>
+        <script language="Javascript">
+            document.oncontextmenu = new Function("event.returnValue=false");
+            document.onselectstart = new Function("event.returnValue=false");
         </script>
 </body>
 
