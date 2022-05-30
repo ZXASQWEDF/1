@@ -12,37 +12,72 @@
             justify-content: center;
             overflow: hidden;
         }
+        
+        .main_container {
+            min-height: 100%;
+            height: auto !important;
+            height: 100%;
+            margin: 0 auto-40px;
+            /*margin-bottom的负值等于footer高度*/
+        }
+        
+        .push,
+        .footer {
+            height: 40px;
+            clear: both;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 14px;
+            border: 1pxsolid #ccc;
+        }
+        
+        img {
+            pointer-events: none;
+        }
     </style>
 </head>
 
 <body onload="a()">
+    <divclass="main_container">
 
+        <div class="container">
+            <center> <img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt=""><img src="/Users/老豆/w3logo.gif" id="image" width="500" height="150"></center>
 
-    <center> <img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt=""><img src="/Users/老豆/w3logo.gif" id="image" width="500" height="150"></center>
+        </div>
 
+        <div class="push">
 
+            <!--中间不要放任何东西-->
 
-    <script>
-        var arr = new Array()
-        arr[0] = "/Users/老豆/w3logo.gif";
-        arr[1] = "/Users/ckyja/Downloads/IMG_5703.JPG";
-        arr[2] = "3.jpg";
-        var i = 0;
+        </div>
 
-        function image() {
+        </div>
+        <center>
+            <footerclass="footer">以上內容禁止轉發、下載、复制，如有發現可能会有刑事責任</footer>
+        </center>
+        <script>
+            var arr = new Array()
+            arr[0] = "/Users/老豆/w3logo.gif";
+            arr[1] = "/Users/ckyja/Downloads/IMG_5703.JPG";
+            arr[2] = "3.jpg";
+            var i = 0;
 
-            var image = document.getElementById("image");
-            image.src = arr[i];
-            i++;
-            if (i > 2) {
-                i = 0
+            function image() {
+
+                var image = document.getElementById("image");
+                image.src = arr[i];
+                i++;
+                if (i > 2) {
+                    i = 0
+                };
             };
-        };
-        setInterval(function() {
+            setInterval(function() {
 
-            image();
-        }, 1000);
-    </script>
+                image();
+            }, 1000);
+        </script>
 </body>
 
 </html>
