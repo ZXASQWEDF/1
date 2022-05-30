@@ -1,0 +1,48 @@
+<html>
+
+<head>
+
+    <style>
+        .round_icon {
+            width: 200px;
+            height: 200px;
+            display: flex;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body onload="a()">
+
+
+    <center> <img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt=""><img src="/Users/老豆/w3logo.gif" id="image" width="500" height="150"></center>
+
+
+
+    <script>
+        var arr = new Array()
+        arr[0] = "/Users/老豆/w3logo.gif";
+        arr[1] = "/Users/ckyja/Downloads/IMG_5703.JPG";
+        arr[2] = "3.jpg";
+        var i = 0;
+
+        function image() {
+
+            var image = document.getElementById("image");
+            image.src = arr[i];
+            i++;
+            if (i > 2) {
+                i = 0
+            };
+        };
+        setInterval(function() {
+
+            image();
+        }, 1000);
+    </script>
+</body>
+
+</html>
