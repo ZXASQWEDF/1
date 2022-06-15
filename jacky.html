@@ -63,6 +63,39 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
+        
+        .b {
+            display: block;
+            margin: 20px auto;
+            background: none;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 22px;
+            outline: none;
+            color: #f8f9fa;
+        }
+        
+        .b {
+            border: 2px solid #3498db;
+            width: 220px;
+        }
+        
+        .b {
+            width: 150px;
+            border: 2px solid #2ecc71;
+            cursor: pointer;
+        }
+        
+        .b:focus {
+            border-color: #2ecc71;
+            width: 280px;
+            transition: 0.5s;
+        }
+        
+        .b:hover {
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
     </style>
 </head>
 <script type="text/javascript">
@@ -89,8 +122,8 @@
 
         <div class="container">
             <center> <img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt="">
-                <input class="j" type="button" value="聯絡方式" onclick="self.location.href='mailto:hkh20070608@gmail.com?';" style=width:100px;height:40px;><br>
-                <img src="https://zxasqwedf.github.io/1/IMG_5864.JPG" id="image" width="800" height="200"></center>
+                <img id="image" width="800" height="200">
+            </center>
             <table>
                 <tr>
                     <h4>某波居然请喝饮料!!!!!!!!!!</h4>
@@ -108,14 +141,52 @@
             <div class="push">
             </div>
         </div>
+
+        <body onload="init()">
+            <form enctype="text/plain" accept-charset="utf-8">
+                <input id="nameText" type="text" name="Name" class="b" placeholder="姓名(name)" required><input id="emailText" type="email" name="Email" class="b" placeholder="Email" required><input id="telText" type="tel" name="Phone" class="b" aria-invalid="false"
+                    placeholder="電話(phone)" required><input id="subText" type="text" name="Subject" class="b" aria-invalid="false" placeholder="主旨(subject)" required><textarea id="bodyText" name="your-message" class="b" aria-required="true" aria-invalid="false"
+                    placeholder="你的訊息(Your Message)" required></textarea>
+                <div>
+                    <input type="button" class="b" value="送出訊息" onclick="submitHandler();">
+                    <a id="mailTo"></a>
+                </div>
+            </form>
+
+            <script>
+                var initSubject = '',
+                    initBody = '';
+
+                function submitHandler() {
+                    var to = "hoikahei2007@gmail.com";
+                    var name = nameText.value;
+                    var email = emailText.value;
+                    var tel = telText.value;
+                    var subject = subText.value;
+                    var body = "" + bodyText.value + '%0A%0A%0A';
+                    body += "From:" + nameText.value + '%0A';
+                    body += "Email:" + emailText.value + '%0A';
+                    body += "Tel:" + telText.value;
+                    mailTo.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+                    mailTo.click();
+                }
+
+                function init() {
+                    subText.value = initSubject;
+                    toText.value = initTo;
+                    bodyText.value = initBody;
+                }
+            </script>
+
+        </body>
         <center>
-            <footerclass="footer">以上內容禁止轉發、下載、复制、截圖或截屏，如有發現可能会有刑事責任</footer>
+            <footerclass="footer">以上內容禁止轉發、p圖、下載、复制、截圖或截屏,如有發現可能会有刑事責任</footer>
         </center>
         <script>
             var arr = new Array()
-            arr[0] = "https://zxasqwedf.github.io/1/IMG_5864.JPG";
-            arr[1] = "https://zxasqwedf.github.io/1/IMG_5864.JPG";
-            arr[2] = "https://zxasqwedf.github.io/1/IMG_5864.JPG";
+            arr[0] = "";
+            arr[1] = "";
+            arr[2] = "";
             var i = 0;
 
             function image() {
