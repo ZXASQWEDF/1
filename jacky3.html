@@ -1,0 +1,140 @@
+<htnl>
+    <style>
+        body {
+            background: linear-gradient(45deg, #fbda61, #ff5acd)
+        }
+        
+        .a {
+            color: white
+        }
+        
+        .navigation {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        .navigation ul {
+            display: flex;
+            width: 350px;
+        }
+        
+        .navigation ul li {
+            position: relative;
+            list-style: none;
+            width: 70px;
+            height: 70px;
+            z-index: 1;
+        }
+        
+        .navigation ul li a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .navigation ul li a .icon {
+            position: relative;
+            display: block;
+            line-height: 75px;
+            font-size: 1.5em;
+            text-align: center;
+            transition: 0.5s;
+            color: var(--clr)
+        }
+        
+        .navigation ul li:hover a .icon {
+            transform: translateY(-35px);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: red;
+        }
+        
+        .navigation ul li a .text {
+            position: relative;
+            color: var(--clr);
+            font-weight: 400;
+            font-size: 0.75em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .navigation ul li:hover a .text {
+            opacity: 1;
+            transform: translateY(10px);
+        }
+        
+        .z {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .zz {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: aqua;
+        }
+    </style>
+
+    <body>
+        <ul>
+            <li>
+                <a class="a" href="jacky.html">2022</a>
+            </li>
+        </ul>
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="https://zxasqwedf.github.io/1/jacky.html">
+                        <span class="icon">
+                                <ion-icon name="home-outline"class="z"></ion-icon>
+                            </span>
+                        <span class="text">主頁</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="https://zxasqwedf.github.io/1/jacky3.html">
+                        <span class="icon"><ion-icon name="search-outline" class="zz"></ion-icon></span>
+                        <span class="text">搜尋</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="https://zxasqwedf.github.io/1/jacky2.html">
+                        <span class="icon"><ion-icon name="at-outline"class="z"></ion-icon></span>
+                        <span class="text">聯絡</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="https://zxasqwedf.github.io/1/jacky4.html">
+                        <span class="icon">           <ion-icon name="home-outline"class="z"></ion-icon></span>
+                        <span class="text">我的</span>
+                    </a>
+                </li>
+
+                <div class="indicator"></div>
+            </ul>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    </body>
+</htnl>

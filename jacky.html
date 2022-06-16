@@ -1,13 +1,16 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <link rel="shortcut icon" href="https://zxasqwedf.github.io/1/8EC2C0FD-FF56-4BA4-A051-504B75244CD5.JPG">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>jacky</title>
-
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
     <style>
         body {
-            background-color: black;
-            color: white
+            background: linear-gradient(45deg, #fbda61, #ff5acd)
         }
         
         .round_icon {
@@ -64,37 +67,103 @@
             transform: translate(-50%, -50%);
         }
         
-        .b {
+        @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+         :root {
+            --clr: #222327;
+        }
+        
+        .navigation {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        .navigation ul {
+            display: flex;
+            width: 350px;
+        }
+        
+        .navigation ul li {
+            position: relative;
+            list-style: none;
+            width: 70px;
+            height: 70px;
+            z-index: 1;
+        }
+        
+        .navigation ul li a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .navigation ul li a .icon {
+            position: relative;
             display: block;
-            margin: 20px auto;
-            background: none;
-            padding: 12px;
-            font-size: 15px;
-            border-radius: 22px;
-            outline: none;
-            color: #f8f9fa;
-        }
-        
-        .b {
-            border: 2px solid #3498db;
-            width: 220px;
-        }
-        
-        .b {
-            width: 150px;
-            border: 2px solid #2ecc71;
-            cursor: pointer;
-        }
-        
-        .b:focus {
-            border-color: #2ecc71;
-            width: 280px;
+            line-height: 75px;
+            font-size: 1.5em;
+            text-align: center;
             transition: 0.5s;
+            color: var(--clr)
         }
         
-        .b:hover {
-            background-color: #2ecc71;
+        .navigation ul li:hover a .icon {
+            transform: translateY(-35px);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: red;
+        }
+        
+        .navigation ul li a .text {
+            position: relative;
+            color: var(--clr);
+            font-weight: 400;
+            font-size: 0.75em;
+            letter-spacing: 0.05em;
             transition: 0.5s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .navigation ul li:hover a .text {
+            opacity: 1;
+            transform: translateY(10px);
+        }
+        
+        .z {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .zz {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: aqua;
         }
     </style>
 </head>
@@ -118,10 +187,11 @@
 </script>
 
 <body onselectstart="return false">
-    <divclass="main_container">
 
+    <divclass="main_container">
         <div class="container">
-            <center> <img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt="">
+            <center>
+                <div class="aaa"><img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt=""></div>
                 <img id="image" width="800" height="200">
             </center>
             <table>
@@ -141,44 +211,39 @@
             <div class="push">
             </div>
         </div>
-
-        <body onload="init()">
-            <form enctype="text/plain" accept-charset="utf-8">
-                <input id="nameText" type="text" name="Name" class="b" placeholder="姓名(name)" required><input id="emailText" type="email" name="Email" class="b" placeholder="Email" required><input id="telText" type="tel" name="Phone" class="b" aria-invalid="false"
-                    placeholder="電話(phone)" required><input id="subText" type="text" name="Subject" class="b" aria-invalid="false" placeholder="主旨(subject)" required><textarea id="bodyText" name="your-message" class="b" aria-required="true" aria-invalid="false"
-                    placeholder="你的訊息(Your Message)" required></textarea>
-                <div>
-                    <input type="button" class="b" value="送出訊息" onclick="submitHandler();">
-                    <a id="mailTo"></a>
-                </div>
-            </form>
-
-            <script>
-                var initSubject = '',
-                    initBody = '';
-
-                function submitHandler() {
-                    var to = "hoikahei2007@gmail.com";
-                    var name = nameText.value;
-                    var email = emailText.value;
-                    var tel = telText.value;
-                    var subject = subText.value;
-                    var body = "" + bodyText.value + '%0A%0A%0A';
-                    body += "From:" + nameText.value + '%0A';
-                    body += "Email:" + emailText.value + '%0A';
-                    body += "Tel:" + telText.value;
-                    mailTo.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
-                    mailTo.click();
-                }
-
-                function init() {
-                    subText.value = initSubject;
-                    toText.value = initTo;
-                    bodyText.value = initBody;
-                }
-            </script>
-
-        </body>
+        <div class="navigation">
+            <ul>
+                <li class="list active">
+                    <a href="https://zxasqwedf.github.io/1/jacky.html">
+                        <span class="icon">
+                                <ion-icon name="home-outline"class="zz"></ion-icon>
+                            </span>
+                        <span class="text">主頁</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="https://zxasqwedf.github.io/1/jacky3.html">
+                        <span class="icon"><ion-icon name="search-outline" class="z"></ion-icon></span>
+                        <span class="text">搜尋</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="https://zxasqwedf.github.io/1/jacky2.html">
+                        <span class="icon"><ion-icon name="at-outline"class="z"></ion-icon></span>
+                        <span class="text">聯絡</span>
+                    </a>
+                </li>
+                <li class="list">
+                    <a href="https://zxasqwedf.github.io/1/jacky4.html">
+                        <span class="icon">           <ion-icon name="home-outline"class="z"></ion-icon></span>
+                        <span class="text">我的</span>
+                    </a>
+                </li>
+                <div class="indicator"></div>
+            </ul>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <center>
             <footerclass="footer">以上內容禁止轉發、p圖、下載、复制、截圖或截屏,如有發現可能会有刑事責任</footer>
         </center>
@@ -206,6 +271,76 @@
         <script language="Javascript">
             document.oncontextmenu = new Function("event.returnValue=false");
             document.onselectstart = new Function("event.returnValue=false");
+        </script>
+        <script>
+            ! function() {
+                function n(n, e, t) {
+                    return n.getAttribute(e) || t
+                }
+
+                function e(n) {
+                    return document.getElementsByTagName(n)
+                }
+
+                function t() {
+                    var t = e("script"),
+                        o = t.length,
+                        i = t[o - 1];
+                    return {
+                        l: o,
+                        z: n(i, "zIndex", -1),
+                        o: n(i, "opacity", .5),
+                        c: n(i, "color", "0,0,0"),
+                        n: n(i, "count", 99)
+                    }
+                }
+
+                function o() {
+                    a = m.width = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, c = m.height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+                }
+
+                function i() {
+                    r.clearRect(0, 0, a, c);
+                    var n, e, t, o, m, l;
+                    s.forEach(function(i, x) {
+                        for (i.x += i.xa, i.y += i.ya, i.xa *= i.x > a || i.x < 0 ? -1 : 1, i.ya *= i.y > c || i.y < 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e = x + 1; e < u.length; e++) n = u[e], null !== n.x && null !== n.y && (o = i.x - n.x, m = i.y - n.y, l = o * o + m * m, l < n.max && (n === y && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m), t = (n.max - l) / n.max, r.beginPath(), r.lineWidth = t / 2, r.strokeStyle = "rgba(" + d.c + "," + (t + .2) + ")", r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))
+                    }), x(i)
+                }
+                var a, c, u, m = document.createElement("canvas"),
+                    d = t(),
+                    l = "c_n" + d.l,
+                    r = m.getContext("2d"),
+                    x = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(n) {
+                        window.setTimeout(n, 1e3 / 45)
+                    },
+                    w = Math.random,
+                    y = {
+                        x: null,
+                        y: null,
+                        max: 2e4
+                    };
+                m.id = l, m.style.cssText = "position:fixed;top:0;left:0;z-index:" + d.z + ";opacity:" + d.o, e("body")[0].appendChild(m), o(), window.onresize = o, window.onmousemove = function(n) {
+                    n = n || window.event, y.x = n.clientX, y.y = n.clientY
+                }, window.onmouseout = function() {
+                    y.x = null, y.y = null
+                };
+                for (var s = [], f = 0; d.n > f; f++) {
+                    var h = w() * a,
+                        g = w() * c,
+                        v = 2 * w() - 1,
+                        p = 2 * w() - 1;
+                    s.push({
+                        x: h,
+                        y: g,
+                        xa: v,
+                        ya: p,
+                        max: 6e3
+                    })
+                }
+                u = s.concat([y]), setTimeout(function() {
+                    i()
+                }, 100)
+            }();
         </script>
 </body>
 

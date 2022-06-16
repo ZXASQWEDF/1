@@ -1,0 +1,199 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background: linear-gradient(45deg, #fbda61, #ff5acd)
+        }
+        
+        .b {
+            display: block;
+            margin: 20px auto;
+            background: none;
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 22px;
+            outline: none;
+            color: #f8f9fa;
+        }
+        
+        .b {
+            border: 2px solid #3498db;
+            width: 220px;
+        }
+        
+        .b {
+            width: 150px;
+            border: 2px solid #2ecc71;
+            cursor: pointer;
+        }
+        
+        .b:focus {
+            border-color: #2ecc71;
+            width: 280px;
+            transition: 0.5s;
+        }
+        
+        .b:hover {
+            background-color: #2ecc71;
+            transition: 0.5s;
+        }
+        
+        .navigation {
+            position: relative;
+            width: 100%;
+            height: 100px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+        }
+        
+        .navigation ul {
+            display: flex;
+            width: 350px;
+        }
+        
+        .navigation ul li {
+            position: relative;
+            list-style: none;
+            width: 70px;
+            height: 70px;
+            z-index: 1;
+        }
+        
+        .navigation ul li a {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            font-weight: 500;
+        }
+        
+        .navigation ul li a .icon {
+            position: relative;
+            display: block;
+            line-height: 75px;
+            font-size: 1.5em;
+            text-align: center;
+            transition: 0.5s;
+            color: var(--clr)
+        }
+        
+        .navigation ul li:hover a .icon {
+            transform: translateY(-35px);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: red;
+        }
+        
+        .navigation ul li a .text {
+            position: relative;
+            color: var(--clr);
+            font-weight: 400;
+            font-size: 0.75em;
+            letter-spacing: 0.05em;
+            transition: 0.5s;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        .navigation ul li:hover a .text {
+            opacity: 1;
+            transform: translateY(10px);
+        }
+        
+        .z {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .zz {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body onload="init()">
+    <form enctype="text/plain" accept-charset="utf-8">
+        <input id="nameText" type="text" name="Name" class="b" placeholder="姓名(name)" required><input id="emailText" type="email" name="Email" class="b" placeholder="Email" required><input id="telText" type="tel" name="Phone" class="b" aria-invalid="false"
+            placeholder="電話(phone)" required><input id="subText" type="text" name="Subject" class="b" aria-invalid="false" placeholder="主旨(subject)" required><textarea id="bodyText" name="your-message" class="b" aria-required="true" aria-invalid="false" placeholder="你的訊息(Your Message)"
+            required></textarea>
+        <div>
+            <input type="button" class="b" value="送出訊息" onclick="submitHandler();">
+            <a id="mailTo"></a>
+        </div>
+    </form>
+    <script>
+        var initSubject = '',
+            initBody = '';
+
+        function submitHandler() {
+            var to = "hoikahei2007@gmail.com";
+            var name = nameText.value;
+            var email = emailText.value;
+            var tel = telText.value;
+            var subject = subText.value;
+            var body = "" + bodyText.value + '%0A%0A%0A';
+            body += "From:" + nameText.value + '%0A';
+            body += "Email:" + emailText.value + '%0A';
+            body += "Tel:" + telText.value;
+            mailTo.href = "mailto:" + to + "?subject=" + subject + "&body=" + body;
+            mailTo.click();
+        }
+
+        function init() {
+            subText.value = initSubject;
+            toText.value = initTo;
+            bodyText.value = initBody;
+        }
+    </script>
+    <div class="navigation">
+        <ul>
+            <li class="list active">
+                <a href="https://zxasqwedf.github.io/1/jacky.html">
+                    <span class="icon">
+                            <ion-icon name="home-outline"class="z"></ion-icon>
+                        </span>
+                    <span class="text">主頁</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="https://zxasqwedf.github.io/1/jacky3.html">
+                    <span class="icon"><ion-icon name="search-outline" class="z"></ion-icon></span>
+                    <span class="text">搜尋</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="https://zxasqwedf.github.io/1/jacky2.html">
+                    <span class="icon"><ion-icon name="at-outline"class="zz"></ion-icon></span>
+                    <span class="text">聯絡</span>
+                </a>
+            </li>
+            <li class="list">
+                <a href="https://zxasqwedf.github.io/1/jacky4.html">
+                    <span class="icon">           <ion-icon name="home-outline"class="z"></ion-icon></span>
+                    <span class="text">我的</span>
+                </a>
+            </li>
+            <div class="indicator"></div>
+        </ul>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>
