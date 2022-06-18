@@ -165,8 +165,71 @@
             border-radius: 10px;
             background-color: aqua;
         }
+        
+        #myInput {
+            background-image: url('https://static.runoob.com/images/mix/searchicon.png');
+            /* 搜索按钮 */
+            background-position: 10px 12px;
+            /* 定位搜索按钮 */
+            background-repeat: no-repeat;
+            /* 不重复图片*/
+            width: 100%;
+            font-size: 16px;
+            /* 加大字体 */
+            padding: 12px 20px 12px 40px;
+            border: 1px solid #ddd;
+            margin-bottom: 12px;
+        }
+        
+        #myUL {
+            /* 移除默认的列表样式 */
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        #myUL li a {
+            border: 1px solid #ddd;
+            /* 链接添加边框 */
+            margin-top: -1px;
+            background: linear-gradient(45deg, #fbda61, #ff5acd);
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            color: black;
+            display: block;
+        }
+        
+        #myUL li a.header {
+            background-color: #e2e2e2;
+            cursor: default;
+        }
+        
+        #myUL li a:hover:not(.header) {
+            background-color: #eee;
+        }
     </style>
 </head>
+<script>
+    function myFunction() {
+        // 声明变量
+        var input, filter, ul, li, a, i;
+        input = document.getElementById('myInput');
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName('li');
+
+        // 循环所有列表，查找匹配项
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
 <script type="text/javascript">
     $(function() {
 
@@ -190,24 +253,36 @@
 
     <divclass="main_container">
         <div class="container">
+
             <center>
                 <div class="aaa"><img src="https://zxasqwedf.github.io/1/IMG_5703.JPG" class="round_icon" alt=""></div>
                 <img id="image" width="800" height="200">
             </center>
-            <table>
-                <tr>
-                    <h4>某波居然请喝饮料!!!!!!!!!!</h4>
-                    <td><img src="https://zxasqwedf.github.io/1/IMG_5863.jpg" width="150" height="200" class="a"></td>
-                </tr>
-            </table>2022/5/28 2:18:56
-            <table>
-                <tr>
-                    <h4>500元??</h4>
-                    <td><img src="https://zxasqwedf.github.io/1/IMG_5218.JPG" width="150" height="200" class="a"></td>
-                    <td><img src="https://zxasqwedf.github.io/1/IMG_5216 Small.jpeg" width="150" height="200" class="a"></td>
-                    <td><img src="https://zxasqwedf.github.io/1/IMG_5217.JPG" width="150" height="200" class="a"></td>
-                </tr>
-            </table>2022/1/23 12:05:15
+
+            <input type="text" id="myInput" onkeyup="myFunction()" placeholder="搜索...">
+
+            <ul id="myUL">
+
+                <li>
+                    <a>
+                        <h4>某波居然请喝饮料!!!!!!!!!!</h4>
+                        <img src="https://zxasqwedf.github.io/1/IMG_5863.jpg" width="150" height="200" class="a">
+                        <p>2022/5/28 2:18:56</p>
+                    </a>
+                </li>
+                <li>
+
+                    <a>
+                        <h4>500元??</h4>
+                        <img src="https://zxasqwedf.github.io/1/IMG_5218.JPG" width="150" height="200" class="a">
+                        <img src="https://zxasqwedf.github.io/1/IMG_5216 Small.jpeg" width="150" height="200" class="a">
+                        <img src="https://zxasqwedf.github.io/1/IMG_5217.JPG" width="150" height="200" class="a">
+                        <p>2022/1/23 12:05:15</p>
+                    </a>
+
+                </li>
+
+            </ul>
             <div class="push">
             </div>
         </div>
